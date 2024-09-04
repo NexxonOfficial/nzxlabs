@@ -3,11 +3,9 @@
     height: 100%;
     padding: 40px;
     box-sizing: border-box;
-    min-height: 100vh;
     max-width: 1400px;
     margin: 0 auto;
     overflow: auto;
-    font-family: 'Montserrat';
 }
 
 .contentBase h1 {
@@ -41,4 +39,14 @@
     text-transform: capitalize;
     font-size: 1rem;
     text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+    .contentBase {
+        width: 100%;
+        height: calc(100% - 120px);
+        position: absolute;
+        top: 120px;
+        padding: 20px 40px;
+    }
 }
