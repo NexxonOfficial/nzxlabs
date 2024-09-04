@@ -1,0 +1,67 @@
+.metaMain {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+}
+
+.metaMain .authorContainer {
+    width: 200px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.metaMain .authorContainer .authorImage {
+    width: 60px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.metaMain .authorContainer .authorImage img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.metaMain .authorContainer .authorText {
+    display: flex;
+    flex-direction: column;
+    width: 140px;
+    height: 100%;
+    justify-content: center;
+}
+
+.metaMain .authorContainer .authorText p {
+    margin: 1px 10px;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.metaMain .authorContainer .authorText p:first-child {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.metaMain .informationContainer {
+    width: calc(100% - 200px);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 1px;
+}
+
+.metaMain .informationContainer p {
+    font-size: 0.9rem;
+    margin: 1px 0px;
+}
+
+.metaMain .informationContainer p:last-of-type {
+    margin-bottom: 0px;
+    font-weight: 600;
+
+}
