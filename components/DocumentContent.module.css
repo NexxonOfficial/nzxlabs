@@ -15,11 +15,30 @@
 
 .contentBase h2 {
     color: white;
+    font-size: 1.8rem;
+    margin: 30px 0px;
+}
+
+.contentBase h3 {
+    color: white;
+    font-size: 1.6rem;
+    margin: 30px 0px;
+}
+
+.contentBase ul {
+    padding-left: 25px;
 }
 
 .contentBase p {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     color: white;
+}
+
+.contentBase li {
+    color: white;
+    font-size: 1.3rem;
+    list-style-type: square;
+    margin: 20px 0px;
 }
 
 .contentBase footer {
@@ -47,6 +66,12 @@
         height: calc(100% - 120px);
         position: absolute;
         top: 120px;
-        padding: 20px 40px;
+        padding: 0px 40px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .contentBase {
+        padding: 0px 10px;
     }
 }

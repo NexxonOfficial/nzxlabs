@@ -3,6 +3,8 @@
     height: 80px;
     display: flex;
     flex-direction: row;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgb(25, 25, 25);
 }
 
 .metaMain .authorContainer {
@@ -16,7 +18,7 @@
     width: 60px;
     height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: baseline;
     align-items: center;
 }
 
@@ -35,14 +37,14 @@
 }
 
 .metaMain .authorContainer .authorText p {
-    margin: 1px 10px;
+    margin: 1px 0px;
     color: white;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 .metaMain .authorContainer .authorText p:first-child {
     font-weight: 600;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 
 .metaMain .informationContainer {
@@ -56,12 +58,20 @@
 }
 
 .metaMain .informationContainer p {
-    font-size: 0.9rem;
+    font-size: 1rem;
     margin: 1px 0px;
+    text-align: end;
 }
 
 .metaMain .informationContainer p:last-of-type {
     margin-bottom: 0px;
     font-weight: 600;
 
+}
+
+@media screen and (max-width: 500px) {
+    .metaMain .authorContainer .authorImage img {
+        width: 40px;
+        height: 40px;
+    }
 }

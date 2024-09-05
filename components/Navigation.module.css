@@ -8,6 +8,7 @@
     overflow-y: auto;
     margin: auto 0;
     border-right: 2px solid rgb(25, 25, 25);
+    transition: height 0.75s cubic-bezier(0.23,1,0.32,1);
 }
 
 .nav .top {
@@ -65,12 +66,125 @@
     border-color: white !important;
 }
 
-@media screen and (max-width: 1000px) {
- .nav {
+.nav .stack {
+    width: 40px;
+    height: 40px;
+    margin-left: auto;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav .stack .opened {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0;
+
+    animation-name: OpacityIn;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+}
+
+.nav .stack .closed {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    opacity: 0;
+
+    animation-name: OpacityIn;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+}
+
+@keyframes OpacityIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.nav .stack .closed .bar {
+    width: 100%;
+    height: 5px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.nav .stack .closed .bar:first-child {
+    rotate: 45deg;
     position: absolute;
-    width: 100vw;
-    height: 120px;
-    background-color: rgb(7, 7, 7);
-    padding: 20px 40px;
- }
+    left: 0;
+    bottom: 45%;
+}
+
+.nav .stack .closed .bar:last-child {
+    rotate: -45deg;
+    position: absolute;
+    right: 0;
+    bottom: 45%;
+}
+
+.nav .stack .opened .bar {
+    width: 100%;
+    height: 5px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 1000px) {
+    .nav {
+        position: absolute;
+        width: 100vw;
+        height: 120px;
+        overflow: hidden;
+        background-color: rgb(7, 7, 7);
+        padding: 20px 40px;
+        z-index: 2;
+        border-bottom: 2px solid rgb(25, 25, 25);
+    }
+
+    .seperation {
+        position: absolute;
+        top: 120px;
+    }
+
+    .nav .stack {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .nav {
+        padding: 20px 10px;
+    }
+
+    .nav .top .logo {
+        width: 70px;
+    }
+
+    .nav .stack {
+        width: 35px;
+        height: 35px;
+    }
+
+    .nav .stack .closed .bar {
+        height: 4px;
+    }
+
+    .nav .stack .opened .bar {
+        height: 4px;
+    }
 }

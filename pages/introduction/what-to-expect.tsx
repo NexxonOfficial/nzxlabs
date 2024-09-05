@@ -2,6 +2,7 @@ import DocumentBase from "../../components/DocumentBase";
 import DocumentContent from "../../components/DocumentContent";
 import Layout from "../../components/Layout";
 import Navigation from "../../components/Navigation";
+import DocumentMetadata from "../../components/DocumentMetadata";
 
 export default function WhatToExpect() {
     return(
@@ -9,6 +10,7 @@ export default function WhatToExpect() {
             <Navigation selected={1} />
             <DocumentContent>
                 <h1>👋 Welcome To Nzxx's Research Page.</h1>
+                <DocumentMetadata readTime={'1 Min'} updated={'Sept 05, 2024'} />
                 <p>Here, you can find anything in relation to what I have been researching. I attempt to document everything to the best of my ability, and may well link you to one of my pages to save time and energy for myself, considering I've already documented it here.</p>
             
                 <p>Overtime, this will be built on and improved upon. UI/Layout of the whole website could change in an instant, so don't panic if things look a little different. I will make sure you are given the run-around if I change something dramatically. For now, enjoy the site and see if you can learn anything new from my discoveries! Some things on here may well be common knowledge, but for my own understanding, I may well write it down for the archive!</p>
