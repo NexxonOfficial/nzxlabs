@@ -46,9 +46,6 @@ export default function Navigation({selected}: {selected: number}) {
                 <div className={styles.category} data-category="Medal FAQ's">
                     <h3>Medal FAQ's</h3>
                     <Link href={'/medal-faq/laggy-clips'} className={selected == 2 ? styles.selected : ''}>Laggy Clips</Link>
-                    <Link href={'/medal-faq/no-audio-clips'} className={selected == 3 ? styles.selected : ''}>No Audio Clips</Link>
-                    <Link href={'/medal-faq/unlisted-clips-dont-appear'} className={selected == 4 ? styles.selected : ''}>Unlisted Clips Don't Appear</Link>
-                    <Link href={'/medal-faq/corrupt-clips'} className={selected == 5 ? styles.selected : ''}>Currupt Clips</Link>
                 </div>
             </div>
         </nav>
