@@ -27,12 +27,12 @@ export default function Navigation({selected}: {selected: number}) {
                 <p>Research</p>
 
                 <div className={styles.stack}>
-                    <div className={!navigationIsOpen ? styles.opened : '' } onClick={() => HandleStackPress()}>
+                    <div className={!navigationIsOpen ? styles.opened : '' } onClick={HandleStackPress}>
                         <div className={styles.bar}></div>
                         <div className={styles.bar}></div>
                         <div className={styles.bar}></div>
                     </div>
-                    <div className={navigationIsOpen ? styles.closed : ''} onClick={() => HandleStackPress()}>
+                    <div className={navigationIsOpen ? styles.closed : ''} onClick={HandleStackPress}>
                         <div className={styles.bar}></div>
                         <div className={styles.bar}></div>
                     </div>

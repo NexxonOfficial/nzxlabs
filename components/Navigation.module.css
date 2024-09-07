@@ -73,6 +73,7 @@
     display: none;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .nav .stack .opened {
