@@ -2,9 +2,14 @@ import DocumentBase from "../../components/DocumentBase";
 import DocumentContent from "../../components/DocumentContent";
 import DocumentMetadata from "../../components/DocumentMetadata";
 import Navigation from "../../components/Navigation";
+import Head from 'next/head'
 
 export default function LaggyClips() {
     return(
+        <>
+        <Head>
+            <title>Nzxlabs Research | Medal Laggy Clips</title>
+        </Head>
         <DocumentBase>
             <Navigation selected={2} />
             <DocumentContent>
@@ -52,5 +57,6 @@ export default function LaggyClips() {
                 </footer>
             </DocumentContent>
         </DocumentBase>
+        </>
     )
 }

@@ -3,9 +3,15 @@ import DocumentContent from "../../components/DocumentContent";
 import Layout from "../../components/Layout";
 import Navigation from "../../components/Navigation";
 import DocumentMetadata from "../../components/DocumentMetadata";
+import Head from 'next/head'
+
 
 export default function WhatToExpect() {
     return(
+        <>
+        <Head>
+            <title>Nzxlabs Research | What To Expect</title>
+        </Head>
         <DocumentBase>
             <Navigation selected={1} />
             <DocumentContent>
@@ -22,5 +28,6 @@ export default function WhatToExpect() {
                 </footer>
             </DocumentContent>
         </DocumentBase>
+        </>
     )
 }
